@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Popins', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    perspective: 1000px;
+}
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50vh;
+    margin: 5rem;
+}
+.card {
+    transform-style: preserve-3d;
+    min-height: 80%;
+    width: 35rem;
+    border-radius: 30px;
+    padding: 1rem 2rem;
+    box-shadow: 0 20px 20px #555, 10px 10px 50px #000;
+}
+.sneaker {
+    width: 100%;
+    min-height: 25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.sneaker img {
+    cursor: zoom-in;
+    z-index: 2;
+    width: 80%;
+    transition: all 0.75s ease;
+}
+.sneaker img:hover {
+    width: 90%;
+}
+.circle {
+    position: absolute;
+    z-index: 1;
+    display: block;
+    padding: 6rem;
+    border-radius: 50%;
+    background: linear-gradient(to right, #11998ebd, #38ef7ed8);
+}
+.info .title {
+    font-weight: bolder;
+    font-size: 2rem;
+    transition: all 0.75s ease;
+}
+.description {
+    font-style: 1.5rem;
+    padding: 1rem 0rem;
+    font-weight: lighter;
+    color: #888;
+    transition: all 0.75s ease;
+}
+.size {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.size input[type='radio'] {
+    position: absolute;
+    opacity: 0;
+}
+.size input[type='radio']:checked + .text {
+    background-color: #555;
+    color: #fff;
+}
+.size .text {
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    width: 18%;
+    padding: 4px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 1px 1px 5px #555;
+    outline: none;
+    transition: all 0.75s ease;
+}
+.purchase {
+    margin: 2rem 0;
+    width: 100%;
+    border-radius: 1.6rem;
+    padding: 0.8rem;
+    background-color: orangered;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.75s ease;
+}
+.purchase:hover {
+    transition: all 0.5s;
+    transform: translate(-1px, -2px);
+    box-shadow: 1px 10px 10px #555;
+}
+.purchase:active {
+    transform: translate(0, 0);
+    box-shadow: 1px 0.1px 10px #555;
+}
